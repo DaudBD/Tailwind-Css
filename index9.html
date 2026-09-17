@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Movie Explorer | Movies</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body
+  class="bg-[#09090B]
+         text-white
+         min-h-screen
+         flex
+         flex-col
+         antialiased
+         overflow-x-hidden"
+>
+
+
+  <!-- ==================================================
+       NAVBAR
+  ================================================== -->
+
+  <header
+    class="bg-[#27272A]
+           border-b
+           border-[#3F3F46]"
+  >
+
+    <nav
+      class="max-w-7xl
+             mx-auto
+             w-full
+             px-4
+             sm:px-6
+             lg:px-8
+             h-16
+             sm:h-[72px]
+             flex
+             items-center
+             justify-between"
+    >
+
+
+      <!-- LOGO -->
+
+      <a
+        href="index.html"
+        class="flex
+               items-center
+               gap-1.5
+               text-xl
+               sm:text-2xl
+               font-extrabold
+               tracking-tight
+               whitespace-nowrap"
+      >
+
+        <span class="text-lg sm:text-xl">
+          🎬
+        </span>
+
+        <span class="text-white">
+          MOVIE
+        </span>
+
+        <span class="text-[#F5C518]">
+          EXPLORER
+        </span>
+
+      </a>
+
+
+
+      <!-- HOME BUTTON -->
+
+      <a
+        href="index.html"
+        class="group
+               inline-flex
+               items-center
+               gap-2
+               px-4
+               py-2
+               sm:px-5
+               sm:py-2.5
+               rounded-lg
+               bg-[#F5C518]
+               text-black
+               text-sm
+               sm:text-base
+               font-bold
+               hover:bg-[#FFD43B]
+               hover:-translate-y-0.5
+               transition-all
+               duration-300"
+      >
+
+        <svg
+          class="w-4 h-4
+                 group-hover:-translate-x-1
+                 transition-transform
+                 duration-300"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+
+          <path d="M19 12H5"></path>
+
+          <path d="M12 19l-7-7 7-7"></path>
+
+        </svg>
+
+        <span>
+          Home
+        </span>
+
+      </a>
+
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ==================================================
+       MAIN
+  ================================================== -->
+
+  <main class="flex-1">
+
+
+    <!-- ==================================================
+         MOVIES SECTION
+    ================================================== -->
+
+    <section
+      class="max-w-7xl
+             mx-auto
+             w-full
+
+             px-4
+             sm:px-6
+             lg:px-8
+
+             py-10
+             sm:py-12
+             lg:py-16"
+    >
+
+
+      <!-- PAGE HEADER -->
+
+      <div class="text-center">
+
+
+        <p
+          class="text-[#F5C518]
+                 text-xs
+                 sm:text-sm
+                 font-bold
+                 tracking-[0.2em]
+                 uppercase"
+        >
+          Explore Collection
+        </p>
+
+
+        <h1
+          class="mt-3
+                 text-3xl
+                 sm:text-4xl
+                 lg:text-5xl
+                 font-extrabold
+                 tracking-tight"
+        >
+          Discover Movies
+        </h1>
+
+
+        <p
+          class="mt-3
+                 max-w-xl
+                 mx-auto
+                 text-sm
+                 sm:text-base
+                 text-[#A1A1AA]"
+        >
+          Search and discover movies you would love
+          to watch.
+        </p>
+
+
+      </div>
+
+
+
+      <!-- ==================================================
+           SEARCH BAR
+      ================================================== -->
+
+      <div
+        class="max-w-3xl
+               mx-auto
+               mt-8
+               sm:mt-10"
+      >
+
+        <div
+          class="relative
+                 flex
+                 items-center"
+        >
+
+
+          <!-- Search Icon -->
+
+          <svg
+            class="absolute
+                   left-4
+                   w-5
+                   h-5
+                   text-[#71717A]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <circle cx="11" cy="11" r="7"></circle>
+
+            <path d="m20 20-3.5-3.5"></path>
+
+          </svg>
+
+
+
+          <!-- Search Input -->
+
+          <input
+            type="search"
+            placeholder="Search for a movie..."
+            class="w-full
+
+                   h-12
+                   sm:h-14
+
+                   pl-12
+                   pr-4
+
+                   rounded-xl
+
+                   bg-[#18181B]
+
+                   border
+                   border-[#3F3F46]
+
+                   text-white
+
+                   text-sm
+                   sm:text-base
+
+                   placeholder:text-[#71717A]
+
+                   outline-none
+
+                   focus:border-[#F5C518]
+                   focus:ring-2
+                   focus:ring-[#F5C518]/10
+
+                   transition"
+          >
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ==================================================
+           MOVIE GRID
+      ================================================== -->
+
+      <div
+        class="mt-10
+               sm:mt-12
+
+               grid
+               grid-cols-2
+               sm:grid-cols-3
+               md:grid-cols-4
+               lg:grid-cols-5
+
+               gap-4
+               sm:gap-5
+               lg:gap-6"
+      >
+
+
+        <!-- ================= MOVIE CARD 1 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+
+          <!-- Poster -->
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+
+            <!-- Rating -->
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     backdrop-blur-sm
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 8.5
+            </div>
+
+          </div>
+
+
+
+          <!-- Card Content -->
+
+          <div class="p-3 sm:p-4">
+
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              The Movie Story
+            </h2>
+
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2024
+            </p>
+
+
+            <!-- Details Button -->
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= MOVIE CARD 2 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 8.2
+            </div>
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              Midnight Cinema
+            </h2>
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2023
+            </p>
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= MOVIE CARD 3 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 7.9
+            </div>
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              Beyond The Screen
+            </h2>
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2022
+            </p>
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= MOVIE CARD 4 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 8.0
+            </div>
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              Last Journey
+            </h2>
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2024
+            </p>
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= MOVIE CARD 5 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 8.7
+            </div>
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              The Adventure
+            </h2>
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2021
+            </p>
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= MOVIE CARD 6 ================= -->
+
+        <article
+          class="group
+                 overflow-hidden
+                 rounded-xl
+                 bg-[#18181B]
+                 border
+                 border-[#27272A]
+                 hover:border-[#F5C518]/40
+                 hover:-translate-y-1
+                 transition-all
+                 duration-300"
+        >
+
+          <div class="relative aspect-[2/3] overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1533920379810-6bedac961555?auto=format&fit=crop&w=600&q=80"
+              alt="Movie poster"
+              class="w-full
+                     h-full
+                     object-cover
+                     group-hover:scale-105
+                     transition-transform
+                     duration-500"
+            >
+
+            <div
+              class="absolute
+                     top-2
+                     right-2
+                     px-2
+                     py-1
+                     rounded-md
+                     bg-black/75
+                     text-xs
+                     font-bold
+                     text-[#F5C518]"
+            >
+              ★ 7.8
+            </div>
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h2
+              class="font-bold
+                     text-sm
+                     sm:text-base
+                     truncate"
+            >
+              Lost Memories
+            </h2>
+
+            <p
+              class="mt-1
+                     text-xs
+                     sm:text-sm
+                     text-[#A1A1AA]"
+            >
+              2020
+            </p>
+
+            <button
+              class="w-full
+                     mt-4
+                     py-2
+                     rounded-lg
+                     bg-[#27272A]
+                     text-white
+                     text-xs
+                     sm:text-sm
+                     font-semibold
+                     hover:bg-[#F5C518]
+                     hover:text-black
+                     transition"
+            >
+              See Details
+            </button>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+<!-- Movie Details Modal -->
+<div
+  id="movieModal"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 px-4 py-6"
+>
+  <!-- Modal Box -->
+  <div
+    class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#18181B] border border-[#3F3F46] shadow-2xl"
+  >
+
+    <!-- Close Button -->
+    <button
+      id="closeModal"
+      class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-xl text-white hover:bg-[#F5C518] hover:text-black transition"
+      aria-label="Close modal"
+    >
+      ✕
+    </button>
+
+    <!-- Movie Image -->
+    <div class="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80"
+        alt="Movie Poster"
+        class="h-full w-full object-cover"
+      >
+
+      <!-- Image Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#18181B] via-black/30 to-transparent"
+      ></div>
+    </div>
+
+    <!-- Movie Content -->
+    <div class="px-5 pb-7 sm:px-8">
+
+      <!-- Title -->
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+        Interstellar
+      </h2>
+
+      <!-- Movie Info -->
+      <div class="mt-4 flex flex-wrap items-center gap-3 text-sm">
+
+        <span class="text-[#F5C518] font-bold">
+          ⭐ 8.7
+        </span>
+
+        <span class="text-[#A1A1AA]">
+          2014
+        </span>
+
+        <span class="rounded-md bg-[#27272A] px-3 py-1 text-[#A1A1AA]">
+          Sci-Fi
+        </span>
+
+        <span class="rounded-md bg-[#27272A] px-3 py-1 text-[#A1A1AA]">
+          Drama
+        </span>
+
+      </div>
+
+      <!-- Overview -->
+      <div class="mt-6">
+        <h3 class="text-lg font-bold text-white">
+          Overview
+        </h3>
+
+        <p class="mt-2 text-sm sm:text-base leading-7 text-[#A1A1AA]">
+          A team of explorers travel through a wormhole in space in an
+          attempt to ensure humanity's survival.
+        </p>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <div class="rounded-xl bg-[#27272A] p-4">
+          <p class="text-xs text-[#71717A]">
+            Release Date
+          </p>
+
+          <p class="mt-1 text-sm font-semibold text-white">
+            November 7, 2014
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-[#27272A] p-4">
+          <p class="text-xs text-[#71717A]">
+            Director
+          </p>
+
+          <p class="mt-1 text-sm font-semibold text-white">
+            Christopher Nolan
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
+  <footer
+    class="bg-[#18181B]
+           border-t
+           border-[#3F3F46]"
+  >
+
+    <div
+      class="max-w-7xl
+             mx-auto
+             w-full
+
+             px-4
+             sm:px-6
+             lg:px-8
+
+             py-6
+
+             flex
+             flex-col
+             sm:flex-row
+
+             items-center
+             justify-between
+
+             gap-3
+             sm:gap-4"
+    >
+
+
+      <!-- Application Name -->
+
+      <p
+        class="text-base
+               sm:text-lg
+               font-bold"
+      >
+
+        <span class="text-white">
+          Movie
+        </span>
+
+        <span class="text-[#F5C518]">
+          Explorer
+        </span>
+
+      </p>
+
+
+
+      <!-- Copyright -->
+
+      <p
+        class="text-xs
+               sm:text-sm
+               text-[#71717A]
+               text-center"
+      >
+
+        © 2026 MovieExplorer. All rights reserved.
+
+      </p>
+
+
+
+      <!-- GitHub -->
+
+      <a
+        href="#"
+        class="text-sm
+               text-[#A1A1AA]
+               hover:text-[#F5C518]
+               transition-colors
+               duration-300"
+      >
+        GitHub
+      </a>
+
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
