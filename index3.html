@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Movie Explorer | Home</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#08080B] text-white min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="absolute top-0 left-0 right-0 z-50">
+
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-20
+                flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html"
+         class="text-xl sm:text-2xl font-extrabold tracking-wide">
+
+        <span class="text-white">MOVIE</span>
+        <span class="text-[#F5C518]">EXPLORER</span>
+
+      </a>
+
+
+      <!-- Movies Button -->
+      <a href="movies.html"
+         class="px-4 py-2 sm:px-6 sm:py-2.5
+                rounded-full
+                border border-[#F5C518]/40
+                bg-[#F5C518]/10
+                text-[#F5C518]
+                font-semibold
+                text-sm sm:text-base
+                hover:bg-[#F5C518]
+                hover:text-black
+                transition duration-300">
+
+        Movies
+
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main class="flex-1">
+
+    <!-- Hero -->
+    <section class="relative min-h-screen
+                    flex items-center
+                    overflow-hidden">
+
+      <!-- Background -->
+      <div class="absolute inset-0">
+
+        <img
+          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=80"
+          alt="Cinema"
+          class="w-full h-full object-cover"
+        >
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0
+                    bg-gradient-to-r
+                    from-[#08080B]
+                    via-[#08080B]/90
+                    to-[#08080B]/40">
+        </div>
+
+        <!-- Bottom Fade -->
+        <div class="absolute inset-0
+                    bg-gradient-to-t
+                    from-[#08080B]
+                    via-transparent
+                    to-[#08080B]/60">
+        </div>
+
+      </div>
+
+
+      <!-- Hero Content -->
+      <div class="relative z-10
+                  max-w-7xl mx-auto
+                  w-full
+                  px-5 sm:px-8 lg:px-10
+                  pt-20">
+
+        <div class="max-w-2xl">
+
+          <!-- Small Heading -->
+          <p class="text-[#F5C518]
+                    text-xs sm:text-sm
+                    font-bold
+                    tracking-[0.3em]">
+
+            YOUR CINEMA, YOUR WORLD
+
+          </p>
+
+
+          <!-- Main Heading -->
+          <h1 class="mt-5
+                     text-4xl
+                     sm:text-5xl
+                     md:text-6xl
+                     lg:text-7xl
+                     font-extrabold
+                     leading-[1.05]">
+
+            Discover Movies
+            <span class="block text-[#F5C518]">
+              You’ll Love.
+            </span>
+
+          </h1>
+
+
+          <!-- Description -->
+          <p class="mt-6
+                    max-w-xl
+                    text-gray-300
+                    text-sm
+                    sm:text-base
+                    lg:text-lg
+                    leading-relaxed">
+
+            Explore a world of movies and discover
+            something worth watching. Find your next
+            favorite movie with Movie Explorer.
+
+          </p>
+
+
+          <!-- CTA -->
+          <div class="mt-8">
+
+            <a href="movies.html"
+               class="inline-flex items-center
+                      gap-2
+                      px-6 py-3.5
+                      sm:px-8 sm:py-4
+                      rounded-xl
+                      bg-[#F5C518]
+                      text-black
+                      font-bold
+                      text-sm sm:text-base
+                      shadow-lg shadow-[#F5C518]/20
+                      hover:bg-yellow-400
+                      hover:-translate-y-1
+                      transition duration-300">
+
+              Explore Movies
+
+              <span class="text-lg">→</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/10
+                 bg-[#08080B]">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-8 lg:px-10
+                py-6
+                flex flex-col
+                sm:flex-row
+                items-center
+                justify-between
+                gap-3">
+
+      <!-- Application Name -->
+      <p class="font-bold text-sm sm:text-base">
+
+        <span class="text-white">Movie</span>
+        <span class="text-[#F5C518]">Explorer</span>
+
+      </p>
+
+
+      <!-- Copyright -->
+      <p class="text-xs sm:text-sm text-gray-500">
+
+        © 2026 MovieExplorer. All rights reserved.
+
+      </p>
+
+
+      <!-- GitHub -->
+      <a href="#"
+         class="text-sm text-gray-400
+                hover:text-[#F5C518]
+                transition">
+
+        GitHub
+
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

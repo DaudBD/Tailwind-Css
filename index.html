@@ -8,18 +8,798 @@
     <title>Tailwind Css Partice Project V4.3</title>
 </head>
 <body>
- 
-    <div class="container mx-auto bg-gray-200 p-4 flex flex-row justify-between items-center w-full inline-flex">
-        <div class="bg-red-500 text-white p-4 flex-1">Logo</div>
-        <div class="bg-green-500 text-white p-4 flex-1">Search</div>
-        <div class="bg-yellow-500 text-white p-4 flex-1">Profile</div>
+ <!--
+   <h1 class="text-3xl font-bold text-blue-500 bg-red-500 p-4 m-4">
+  Hello Tailwind
+</h1>
 
-<div class="grid grid-cols-3 gap-4">
-        <ul>
-        <li>Home</li><li>Contact</li><li>About</li><li>Service</li><li>More</li>
-        </ul>
+<button class="text-blue-500 font-bold bg-red-500 px-4-py-4 rounded-lg">Clcik Me</button>
+
+
+<div class="w-80 p-6 m-4 rounded-lg shadow-lg bg-blue-500">
+
+  <h2 class="text-2xl font-bold">
+    My Profile
+  </h2>
+
+  <p class="mt-2">
+    Md Ariful Islam
+  </p>
+
+  <p class="mt-1">
+    Frontend Developer
+  </p>
+
+  <button class="mt-4 px-4 py-2 rounded-lg bg-red-500 text-red-white">
+    View Profile
+  </button>
+
+</div>
+
+<div class="w-80 h-96 p-6 m-4 rounded-lg bg-blue-600">
+
+  <h2 class="text-2xl font-bold">
+    Description
+  </h2>
+
+  <p class="mt-2 text-yellow-600">
+    ★ 4.5
+  </p>
+
+  <p class="mt-1 text-yellow-900">
+    ★ 2026
+  </p>
+
+  <button class="mt-4 p-2 rounded-lg bg-blue-900 text-white">
+    Details
+  </button>
+
+</div>
+
+
+<header class="mx-auto">
+
+  <nav class="flex items-center justify-between p-4 bg-gray-900">
+
+  
+    <div class="text-2xl font-bold text-yellow-600">
+      Cinebaz
     </div>
 
+   
+    <ul class="flex gap-6 text-white">
+      <li>Home</li>
+      <li>Home</li>
+      <li>Contact</li>
+      <li>About</li>
+      <li>Service</li>
+    </ul>
 
+    
+    <button class="px-4 py-2 text-white bg-blue-600 rounded-lg">
+      Login
+    </button>
+
+  </nav>
+
+</header>
+
+  <section>
+
+  </section>
+
+</header> 
+-->
+
+
+
+<body class="bg-[#0B0B0F] text-white">
+
+  <!-- ================= HEADER ================= -->
+  <header class="border-b border-[#27272A]">
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4
+             flex items-center justify-between"
+      aria-label="Main navigation"
+    >
+<a href="#" class="text-2xl font-bold tracking-wide">
+  <span class="text-gray-150">MOVIE</span>
+  <span class="text-[#F5C518]">EXPLORER</span>
+</a>
+
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-6 lg:gap-8 text-gray-300">
+
+        <li>
+          <a href="#" class="hover:text-[#F5C518] transition">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-[#F5C518] transition">
+            Movies
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-[#F5C518] transition">
+            Series
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-[#F5C518] transition">
+            Genres
+          </a>
+        </li>
+
+      </ul>
+
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-3">
+
+        <button
+          class="hidden sm:block px-4 sm:px-5 py-2
+                 bg-[#F5C518] text-black font-semibold
+                 rounded-lg hover:bg-yellow-400 transition"
+        >
+          Login
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden p-2 border border-gray-700 rounded-lg"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+
+    <!-- ================= HERO ================= -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+             py-16 sm:py-20 lg:py-28"
+    >
+
+      <div class="max-w-3xl">
+
+        <p class="text-[#F5C518] font-semibold text-sm sm:text-base">
+          PREMIUM MOVIES
+        </p>
+
+        <h1
+          class="mt-3 text-4xl sm:text-5xl lg:text-6xl
+                 font-bold leading-tight"
+        >
+          Watch Your Favorite
+          <span class="text-[#F5C518]">
+            Movies
+          </span>
+        </h1>
+
+        <p
+          class="mt-5 text-gray-400
+                 text-base sm:text-lg
+                 leading-relaxed"
+        >
+          Discover the latest movies, popular series and
+          exciting entertainment all in one place.
+        </p>
+
+
+        <!-- Hero Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+
+          <button
+            class="px-6 py-3
+                   bg-[#F5C518] text-black font-bold
+                   rounded-lg hover:bg-yellow-400 transition"
+          >
+            ▶ Watch Now
+          </button>
+
+          <button
+            class="px-6 py-3
+                   border border-gray-700
+                   rounded-lg
+                   hover:border-[#F5C518]
+                   transition"
+          >
+            Browse Movies
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MOVIES ================= -->
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+             pb-16 sm:pb-20"
+    >
+
+      <!-- Section Heading -->
+      <div
+        class="flex items-center justify-between
+               gap-4 mb-6"
+      >
+
+        <h2 class="text-2xl sm:text-3xl font-bold">
+          Popular Movies
+        </h2>
+
+        <a
+          href="#"
+          class="text-[#F5C518] text-sm sm:text-base
+                 whitespace-nowrap"
+        >
+          View All →
+        </a>
+
+      </div>
+
+
+      <!-- Movie Grid -->
+      <div
+        class="grid
+               grid-cols-2
+               sm:grid-cols-3
+               lg:grid-cols-4
+               xl:grid-cols-5
+               gap-4 sm:gap-5 lg:gap-6"
+      >
+
+
+        <!-- Movie Card -->
+        <article
+          class="bg-[#15151C]
+                 rounded-xl overflow-hidden
+                 border border-[#27272A]
+                 hover:-translate-y-1
+                 transition duration-300"
+        >
+
+          <div class="aspect-[2/3] bg-gray-800">
+
+            <img
+              src="movie.jpg"
+              alt="Movie poster"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+
+          <div class="p-3 sm:p-4">
+
+            <h3 class="font-bold text-base sm:text-lg truncate">
+              Movie Title
+            </h3>
+
+            <p class="text-gray-400 text-sm mt-1">
+              Action • 2026
+            </p>
+
+            <div
+              class="flex items-center justify-between
+                     gap-2 mt-3 sm:mt-4"
+            >
+
+              <span class="text-[#F5C518] text-sm">
+                ★ 4.8
+              </span>
+
+              <a
+                href="#"
+                class="text-xs sm:text-sm
+                       bg-[#F5C518]
+                       text-black
+                       px-3 py-1.5
+                       rounded-md
+                       font-semibold"
+              >
+                Details
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Card 2 -->
+        <article
+          class="bg-[#15151C]
+                 rounded-xl overflow-hidden
+                 border border-[#27272A]
+                 hover:-translate-y-1
+                 transition"
+        >
+
+          <div class="aspect-[2/3] bg-gray-800">
+
+            <img
+              src="movie2.jpg"
+              alt="Movie poster"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+          <div class="p-3 sm:p-4">
+
+            <h3 class="font-bold text-base sm:text-lg truncate">
+              Movie Title 2
+            </h3>
+
+            <p class="text-gray-400 text-sm mt-1">
+              Drama • 2026
+            </p>
+
+            <div class="flex items-center justify-between mt-3 sm:mt-4">
+
+              <span class="text-[#F5C518] text-sm">
+                ★ 4.6
+              </span>
+
+              <a
+                href="#"
+                class="text-xs sm:text-sm
+                       bg-[#F5C518] text-black
+                       px-3 py-1.5 rounded-md font-semibold"
+              >
+                Details
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Card 3 -->
+        <article
+          class="bg-[#15151C]
+                 rounded-xl overflow-hidden
+                 border border-[#27272A]
+                 hover:-translate-y-1 transition"
+        >
+
+          <div class="aspect-[2/3] bg-gray-800">
+
+            <img
+              src="movie3.jpg"
+              alt="Movie poster"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+          <div class="p-3 sm:p-4">
+
+            <h3 class="font-bold text-base sm:text-lg truncate">
+              Movie Title 3
+            </h3>
+
+            <p class="text-gray-400 text-sm mt-1">
+              Thriller • 2026
+            </p>
+
+            <div class="flex items-center justify-between mt-3 sm:mt-4">
+
+              <span class="text-[#F5C518] text-sm">
+                ★ 4.7
+              </span>
+
+              <a
+                href="#"
+                class="text-xs sm:text-sm
+                       bg-[#F5C518] text-black
+                       px-3 py-1.5 rounded-md font-semibold"
+              >
+                Details
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Card 4 -->
+        <article
+          class="bg-[#15151C]
+                 rounded-xl overflow-hidden
+                 border border-[#27272A]
+                 hover:-translate-y-1 transition"
+        >
+
+          <div class="aspect-[2/3] bg-gray-800">
+
+            <img
+              src="movie4.jpg"
+              alt="Movie poster"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+          <div class="p-3 sm:p-4">
+
+            <h3 class="font-bold text-base sm:text-lg truncate">
+              Movie Title 4
+            </h3>
+
+            <p class="text-gray-400 text-sm mt-1">
+              Comedy • 2026
+            </p>
+
+            <div class="flex items-center justify-between mt-3 sm:mt-4">
+
+              <span class="text-[#F5C518] text-sm">
+                ★ 4.5
+              </span>
+
+              <a
+                href="#"
+                class="text-xs sm:text-sm
+                       bg-[#F5C518] text-black
+                       px-3 py-1.5 rounded-md font-semibold"
+              >
+                Details
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-[#27272A] bg-[#0B0B0F]">
+
+    <div
+      class="max-w-7xl mx-auto
+             px-4 sm:px-6 lg:px-8
+             py-10"
+    >
+
+      <div
+        class="grid
+               grid-cols-1
+               sm:grid-cols-2
+               lg:grid-cols-4
+               gap-8"
+      >
+
+        <!-- About -->
+        <div>
+
+          <h2 class="text-xl font-bold text-[#F5C518]">
+            Cinebaz
+          </h2>
+
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            Your destination for movies, series and
+            entertainment.
+          </p>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav aria-label="Footer navigation">
+
+          <h3 class="font-semibold mb-3">
+            Quick Links
+          </h3>
+
+          <ul class="space-y-2 text-sm text-gray-400">
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Movies
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Series
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+
+        <!-- Genres -->
+        <nav aria-label="Movie genres">
+
+          <h3 class="font-semibold mb-3">
+            Genres
+          </h3>
+
+          <ul class="space-y-2 text-sm text-gray-400">
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Action
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Comedy
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-[#F5C518]">
+                Thriller
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+
+        <!-- Contact -->
+        <div>
+
+          <h3 class="font-semibold mb-3">
+            Follow Us
+          </h3>
+
+          <div class="flex gap-3">
+
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="w-9 h-9
+                     flex items-center justify-center
+                     rounded-lg bg-[#15151C]
+                     hover:bg-[#F5C518]
+                     hover:text-black transition"
+            >
+              F
+            </a>
+
+            <a
+              href="#"
+              aria-label="Telegram"
+              class="w-9 h-9
+                     flex items-center justify-center
+                     rounded-lg bg-[#15151C]
+                     hover:bg-[#F5C518]
+                     hover:text-black transition"
+            >
+              T
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Copyright -->
+      <div
+        class="border-t border-[#27272A]
+               mt-8 pt-6
+               text-center text-sm text-gray-500"
+      >
+
+        © 2026 Cinebaz. All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<body class="bg-[#0B0B0F] text-white min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="border-b border-[#27272A]">
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+             h-16 flex items-center justify-between"
+    >
+
+      <!-- Logo -->
+      <a href="#" class="text-xl sm:text-2xl font-bold tracking-wide">
+
+        <span class="text-white">
+          MOVIE
+        </span>
+
+        <span class="text-[#F5C518]">
+          EXPLORER
+        </span>
+
+      </a>
+
+
+      <!-- Movie Button -->
+      <a
+        href="/movies"
+        class="px-4 py-2 sm:px-5
+               bg-[#F5C518] text-black
+               font-semibold rounded-lg
+               hover:bg-yellow-400
+               transition"
+      >
+        Movies
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main class="flex-1">
+
+    <!-- Hero -->
+    <section
+      class="relative min-h-[70vh]
+             flex items-center justify-center
+             text-center px-4"
+    >
+
+      <!-- Background -->
+      <div
+        class="absolute inset-0
+               bg-gradient-to-b
+               from-[#18181B]
+               via-[#0B0B0F]
+               to-[#0B0B0F]"
+      ></div>
+
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-3xl">
+
+        <p
+          class="text-[#F5C518]
+                 font-semibold
+                 text-sm sm:text-base
+                 tracking-widest"
+        >
+          DISCOVER MOVIES
+        </p>
+
+
+        <h1
+          class="mt-4
+                 text-4xl sm:text-5xl lg:text-6xl
+                 font-bold
+                 leading-tight"
+        >
+          Explore Your
+          <span class="text-[#F5C518]">
+            Favorite Movies
+          </span>
+        </h1>
+
+
+        <p
+          class="mt-6
+                 text-gray-400
+                 text-base sm:text-lg
+                 leading-relaxed"
+        >
+          Explore and discover your favorite movies
+          from around the world.
+        </p>
+
+
+        <!-- CTA -->
+        <a
+          href="/movies"
+          class="inline-block
+                 mt-8
+                 px-6 py-3
+                 bg-[#F5C518]
+                 text-black
+                 font-bold
+                 rounded-lg
+                 hover:bg-yellow-400
+                 hover:scale-105
+                 transition"
+        >
+          Explore Now
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-[#27272A]">
+
+    <div
+      class="max-w-7xl mx-auto
+             px-4 sm:px-6 lg:px-8
+             py-6
+             flex flex-col sm:flex-row
+             items-center
+             justify-between
+             gap-4"
+    >
+
+      <!-- Application Name -->
+      <p class="font-semibold">
+        <span class="text-white">
+          Movie
+        </span>
+        <span class="text-[#F5C518]">
+          Explorer
+        </span>
+      </p>
+
+
+      <!-- Copyright -->
+      <p class="text-sm text-gray-500">
+        © 2026 MovieExplorer. All rights reserved.
+      </p>
+
+
+      <!-- GitHub -->
+      <a
+        href="#"
+        class="text-gray-400
+               hover:text-[#F5C518]
+               transition"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  
 </body>
 </html>
